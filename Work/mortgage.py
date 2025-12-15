@@ -7,7 +7,7 @@ principal = 500000.0
 rate = 0.05
 payment = 2684.11
 total_paid = 0.0
-extra_payment_starth_month = 0
+extra_payment_starth_month = 0 
 extra_payment_end_month = 12 
 extra_payment = 1000 
 
@@ -23,11 +23,9 @@ while principal > 0:
 
     # Correct for last month
     if principal < 0:
-        total_paid =- principal
+        total_paid += principal
         principal = 0
 
     i += 1
 
-    
-    print("Month: " + str(i) + "\tTotal paid: " + str(round(total_paid,2)) + "\tRemaining: " + str(round(principal,2)))
-
+    print(f'Month {i:3d}    Total paid: {total_paid:10.2f}    Remaining: {principal:10.2f}')
